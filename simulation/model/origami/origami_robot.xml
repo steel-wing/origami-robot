@@ -1,0 +1,202 @@
+<mujoco model="two_prisms_hinge">
+    <option integrator="implicitfast" timestep="0.001"/>
+    <compiler angle="radian" inertiafromgeom="true"/>
+    <!-- gravity to pull it down -->
+    <option gravity="0 0 -9.81"/>
+
+    <asset>
+        <!-- Sky -->
+        <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2="1 1 1" width="512" height="3072" />
+
+        <!-- Ground -->
+        <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.9 0.9 0.9" rgb2="0.8 0.8 0.8" markrgb="0.8 0.8 0.8" width="100" height="100" />
+        <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="10 10" reflectance="0.1" />
+    </asset>
+
+    <!-- Haze -->
+    <visual>
+        <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+        <rgba haze="0.3 0.5 0.7 1" />
+    </visual>
+
+    <worldbody>
+        <!-- Ground Collision -->
+        <light pos="10 -10 20" dir="-1 1 -1.5" diffuse="0.5 0.5 0.5" directional="false" />
+        <geom name="floor" group="1" size="0 0 0.01" type="plane" material="groundplane" />
+    </worldbody>
+
+    <asset>
+        <!-- Triangular Prism Mesh
+        Each triangle has its origin at its forward point, with Y being towards the base,
+        X being left-right, and Z being down 
+        All values are measured in SI units, from the physical robot-->
+        <mesh name="prism_mesh"
+              vertex="
+                -0.0530 -0.0530 -0.09       0.0530 -0.0530 -0.09         0 0 -0.09
+                -0.0530 -0.0530 0           0.0530 -0.0530 0             0 0 0"
+              face="
+                2 1 0   4 5 3
+                1 3 0   4 3 1
+                2 4 1   5 4 2
+                0 5 2   3 5 0"/>
+    </asset>
+
+    <!-- Robot -->
+    <worldbody>
+        <!-- prism 1-->
+        <body name="prism1_body" pos="0 0 0" euler="0 0 3.14159">
+            <geom type="mesh" mesh="prism_mesh" rgba="0.8 0.6 0.2 1" density="288"/>
+            <!-- free joint lets it fall and move and stuff -->
+            <joint type="free"/>
+
+            <!-- prism 2-->
+            <body name="prism2_body" pos="0.0530 -0.0530 0" euler="0 0 3.14159">
+                <geom type="mesh"  mesh="prism_mesh" rgba="0.3 0.3 0.8 1"  density="288"/>
+                <joint name="jaw_hinge_2" type="hinge" pos="0.02652 -0.02652 0" axis="-1 1 0" range="0 3.14" damping="0.02"/>
+
+                <!-- prism 4-->
+                <body name="prism4_body" pos="0 -0.10606 0" euler="0 0 3.141592">
+                    <geom type="mesh" mesh="prism_mesh" rgba="0.3 0.6 0.8 1" density="288"/>
+                    <joint name="jaw_hinge_4" type="hinge" pos="0 -0.0530 -0.09" axis="-1 0 0" range="0 3.14" damping="0.02"/>
+
+                    <!-- prism 6-->
+                    <body name="prism6_body" pos="-0.0530 -0.0530 0" euler="0 0 3.141592">
+                        <geom type="mesh" mesh="prism_mesh" rgba="0.8 0.6 0.2 1" density="288"/>
+                        <joint name="jaw_hinge_6" type="hinge" pos="-0.02652 -0.02652 0" axis="-1 -1 0" range="0 3.14" damping="0.02"/>
+                    </body>
+                </body>
+            </body>
+
+            <!-- prism 3-->
+            <body name="prism3_body" pos="-0.0530 -0.0530 0" euler="0 0 3.14159">
+                <geom type="mesh" mesh="prism_mesh" rgba="0.3 0.3 0.8 1" density="288"/>
+                <joint name="jaw_hinge_3" type="hinge" pos="-0.02652 -0.02652 0" axis="-1 -1 0" range="0 3.14" damping="0.02"/>
+
+
+                <!-- prism 5-->
+                <body name="prism5_body" pos="0 -0.10606 0" euler="0 0 3.141592">
+                    <geom type="mesh" mesh="prism_mesh" rgba="0.3 0.6 0.8 1" density="288"/>
+                    <joint name="jaw_hinge_5" type="hinge" pos="0 -0.0530 -0.09" axis="-1 0 0" range="0 3.14" damping="0.02"/>
+                </body>
+            </body>
+
+            <!-- prism 7-->
+            <body name="prism7_body" pos="0 -0.10606 0" euler="0 0 3.14159">
+                <geom type="mesh" mesh="prism_mesh" rgba="0.9 0.1 0.3 1" density="288"/>
+                <joint name="jaw_hinge_7" type="hinge" pos="0 -0.0530 -0.09" axis="-1 0 0" range="0 3.14" damping="0.02"/>
+
+                <!-- prism 8-->
+                <body name="prism8_body" pos="0.0530 -0.0530 0" euler="0 0 3.14159">
+                    <geom type="mesh"  mesh="prism_mesh" rgba="0.5 0.3 0.8 1"  density="288"/>
+                    <joint name="jaw_hinge_8" type="hinge" pos="0.02652 -0.02652 0" axis="-1 1 0" range="0 3.14" damping="0.02"/>
+
+                    <!-- prism 10-->
+                    <body name="prism10_body" pos="0 -0.10606 0" euler="0 0 3.141592">
+                        <geom type="mesh" mesh="prism_mesh" rgba="0.3 0.8 0.2 1" density="288"/>
+                        <joint name="jaw_hinge_10" type="hinge" pos="0 -0.0530 -0.09" axis="-1 0 0" range="0 3.14" damping="0.02"/>
+
+                        <!-- prism 12-->
+                        <body name="prism12_body" pos="-0.0530 -0.0530 0" euler="0 0 3.141592">
+                            <geom type="mesh" mesh="prism_mesh" rgba="0.9 0.1 0.3 1" density="288"/>
+                            <joint name="jaw_hinge_12" type="hinge" pos="-0.02652 -0.02652 0" axis="-1 -1 0" range="0 3.14" damping="0.02"/>
+                        </body>
+                    </body>
+                </body>
+
+                <!-- prism 9-->
+                <body name="prism9_body" pos="-0.0530 -0.0530 0" euler="0 0 3.14159">
+                    <geom type="mesh" mesh="prism_mesh" rgba="0.5 0.3 0.8 1" density="288"/>
+                    <joint name="jaw_hinge_9" type="hinge" pos="-0.02652 -0.02652 0" axis="-1 -1 0" range="0 3.14" damping="0.02"/>
+
+                    <!-- prism 11-->
+                    <body name="prism11_body" pos="0 -0.10606 0" euler="0 0 3.141592">
+                        <geom type="mesh" mesh="prism_mesh" rgba="0.3 0.8 0.2 1" density="288"/>
+                        <joint name="jaw_hinge_11" type="hinge" pos="0 -0.0530 -0.09" axis="-1 0 0" range="0 3.14" damping="0.02"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+
+    <!-- Actuations and Constraints -->
+    <actuator>
+        <position
+            name="l_left" tendon="hinges_3_6" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <tendon>
+        <fixed name="hinges_3_6">
+            <joint joint="jaw_hinge_3" coef="0.5"/>
+            <joint joint="jaw_hinge_6" coef="0.5"/>
+        </fixed>
+    </tendon>
+
+    <actuator>
+        <position 
+            name="r_left" joint="jaw_hinge_2" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <actuator>
+        <position name="m_left" tendon="hinges_4_5" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <tendon>
+        <fixed name="hinges_4_5">
+            <joint joint="jaw_hinge_4" coef="0.5"/>
+            <joint joint="jaw_hinge_5" coef="0.5"/>
+        </fixed>
+    </tendon>
+
+    <actuator>
+        <position 
+            name="center" joint="jaw_hinge_7" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.83385 0.83385"/>
+    </actuator>
+
+    <actuator>
+        <position 
+            name="r_right" joint="jaw_hinge_8" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <actuator>
+        <position
+            name="l_right" tendon="hinges_9_12" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <tendon>
+        <fixed name="hinges_9_12">
+            <joint joint="jaw_hinge_9" coef="0.5"/>
+            <joint joint="jaw_hinge_12" coef="0.5"/>
+        </fixed>
+    </tendon>
+
+    <actuator>
+        <position
+            name="m_right" tendon="hinges_10_11" kp="10" kv="1" ctrlrange="0 3.14" ctrllimited="true" forcelimited="true" forcerange="-0.3924 0.3924"/>
+    </actuator>
+
+    <tendon>
+        <fixed name="hinges_10_11">
+            <joint joint="jaw_hinge_10" coef="0.5"/>
+            <joint joint="jaw_hinge_11" coef="0.5"/>
+        </fixed>
+    </tendon>
+
+    <!-- These are the loop closure constraints. At compile time, we anchor body2 to body1 at
+    the anchor point, relative to body1 -->
+    <equality>
+        <connect name="close_hex_1" body1="prism5_body" body2="prism6_body" anchor="0 0 0"/>
+    </equality>
+
+    <equality>
+        <connect name="close_hex_2" body1="prism5_body" body2="prism6_body" anchor="1 -1 0"/>
+    </equality>
+
+    <equality>
+        <connect name="close_hex_3" body1="prism11_body" body2="prism12_body" anchor="0 0 0"/>
+    </equality>
+
+    <equality>
+        <connect name="close_hex_4" body1="prism11_body" body2="prism12_body" anchor="1 -1 0"/>
+    </equality>
+</mujoco>

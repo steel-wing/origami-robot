@@ -1,0 +1,251 @@
+        Testing mode (4, 4), with orientation 1, with y displacement loss
+x 0.97
+y -1.53
+r 0.41
+-1.53, 0.01, 0.0, 0.01, 0.0, 0.25, 2.07, 1.85, 0.16, 2.99, 1.44, 3.0, 0.2, 4, 4, 1, 1
+
+        Testing mode (4, 4), with orientation 0, with y displacement loss
+x 0.31
+y 0.12
+r -0.01
+0.12, 1.5, 3.0, 0.34, 0.02, 0.01, 0.02, 0.01, 0.45, 1.97, 1.82, 0.04, 2.99, 4, 4, 0, 1
+
+        Testing mode (4, 4), with orientation 1, with x displacement loss
+x -1.11
+y 1.59
+r 0.23
+-1.11, 1.38, 0.28, 0.0, 1.59, 0.26, 0.0, 2.91, 0.02, 1.87, 0.78, 3.0, 1.68, 4, 4, 1, 0
+
+        Testing mode (4, 4), with orientation 0, with x displacement loss
+x 0.13
+y 0.86
+r -0.31
+0.13, 0.0, 0.57, 2.06, 2.37, 1.35, 0.23, 1.34, 0.0, 0.0, 1.18, 3.0, 1.09, 4, 4, 0, 0
+
+        Testing mode (4, 4), with orientation 1, with rotation loss
+x -0.13
+y 1.23
+r -0.04
+-0.04, 0.0, 0.75, 2.4, 0.0, 3.0, 2.23, 1.85, 1.65, 0.01, 2.11, 0.2, 0.0, 4, 4, 1, 2
+
+        Testing mode (4, 4), with orientation 0, with rotation loss
+x -0.01
+y -0.62
+r 0.01
+0.01, 0.78, 3.0, 1.7, 1.3, 0.22, 0.0, 1.74, 0.35, 0.0, 2.93, 0.01, 1.83, 4, 4, 0, 2
+
+        Testing mode (4, 3), with orientation 1, with y displacement loss
+x -0.08
+y 0.31
+r -0.08
+0.31, 0.0, 1.08, 1.72, 1.58, 2.99, 0.86, 1.8, 0.75, 0.0, 2.18, 0.56, 2.77, 4, 3, 1, 1
+
+        Testing mode (4, 3), with orientation 0, with y displacement loss
+x 0.08
+y 0.27
+r -0.03
+0.27, 0.0, 0.0, 0.02, 2.98, 0.0, 0.02, 0.36, 1.5, 2.94, 0.0, 0.33, 0.05, 4, 3, 0, 1
+
+        Testing mode (4, 3), with orientation 1, with x displacement loss
+x 0.26
+y -0.46
+r 0.74
+0.26, 0.01, 0.33, 1.63, 1.86, 0.0, 2.94, 1.62, 3.0, 0.67, 0.0, 0.18, 1.32, 4, 3, 1, 0
+
+        Testing mode (4, 3), with orientation 0, with x displacement loss
+x -0.22
+y -0.43
+r -0.68
+-0.22, 0.77, 3.0, 1.89, 0.0, 0.02, 1.03, 0.03, 0.01, 2.98, 2.99, 2.27, 0.0, 4, 3, 0, 0
+
+        Testing mode (4, 3), with orientation 1, with rotation loss
+x 0.07
+y 0.72
+r -0.19
+-0.19, 2.94, 0.05, 1.86, 0.62, 3.0, 1.61, 1.96, 2.12, 0.27, 1.54, 0.23, 0.0, 4, 3, 1, 2
+
+        Testing mode (4, 3), with orientation 0, with rotation loss
+x 0.34
+y 0.22
+r -0.72
+-0.72, 2.97, 0.02, 0.02, 0.02, 2.27, 2.96, 1.87, 2.99, 0.81, 1.12, 0.01, 0.0, 4, 3, 0, 2
+
+        Testing mode (4, 1), with orientation 1, with y displacement loss
+x -0.39
+y -0.07
+r 2.23
+-0.07, 0.06, 2.71, 2.65, 2.1, 2.98, 0.69, 1.31, 0.0, 0.0, 2.99, 0.0, 0.87, 4, 1, 1, 1
+
+        Testing mode (4, 1), with orientation 0, with y displacement loss
+x -0.18
+y 0.2
+r 0.71
+0.2, 2.09, 0.16, 2.99, 0.02, 0.96, 1.36, 0.01, 0.32, 0.0, 1.3, 2.21, 0.09, 4, 1, 0, 1
+
+        Testing mode (4, 1), with orientation 1, with x displacement loss
+x -0.31
+y -0.37
+r 0.18
+-0.31, 0.0, 0.01, 1.15, 0.01, 0.42, 1.86, 2.19, 1.02, 0.0, 1.12, 2.99, 1.52, 4, 1, 1, 0
+
+        Testing mode (4, 1), with orientation 0, with x displacement loss
+x 0.13
+y 0.24
+r -1.91
+0.13, 0.0, 0.19, 0.0, 0.0, 1.34, 1.19, 0.0, 0.0, 2.02, 1.92, 1.35, 0.4, 4, 1, 0, 0
+
+        Testing mode (4, 1), with orientation 1, with rotation loss
+x 0.07
+y -0.42
+r 2.03
+2.03, 1.84, 0.01, 2.88, 1.74, 2.99, 0.86, 0.01, 1.28, 1.73, 0.0, 0.28, 1.61, 4, 1, 1, 2
+
+        Testing mode (4, 1), with orientation 0, with rotation loss
+x -0.02
+y 0.04
+r -3.01
+-3.01, 3.0, 0.32, 2.17, 1.41, 1.08, 0.01, 0.03, 0.42, 0.0, 0.08, 1.72, 2.26, 4, 1, 0, 2
+
+        Testing mode (3, 3), with orientation 1, with y displacement loss
+x -0.0
+y 0.28
+r 0.0
+0.28, 0.04, 0.0, 0.0, 2.98, 0.0, 0.01, 3.0, 1.15, 2.24, 0.23, 2.99, 1.48, 3, 3, 1, 1
+
+        Testing mode (3, 3), with orientation 0, with y displacement loss
+x -0.01
+y -0.28
+r 0.45
+-0.28, 0.0, 0.65, 1.73, 0.0, 0.35, 1.67, 1.79, 0.02, 2.97, 1.74, 3.0, 0.76, 3, 3, 0, 1
+
+        Testing mode (3, 3), with orientation 1, with x displacement loss
+x 0.0
+y 0.15
+r -0.01
+0.0, 0.34, 2.99, 1.56, 0.0, 0.0, 0.01, 2.02, 0.38, 0.02, 2.99, 0.09, 1.78, 3, 3, 1, 0
+
+        Testing mode (3, 3), with orientation 0, with x displacement loss
+x -0.05
+y 0.04
+r 0.68
+-0.05, 0.72, 2.99, 1.73, 1.22, 0.17, 0.0, 1.93, 0.47, 0.0, 2.95, 0.01, 1.79, 3, 3, 0, 0
+
+        Testing mode (3, 3), with orientation 1, with rotation loss
+x 0.0
+y -0.06
+r 0.06
+0.06, 0.53, 1.5, 2.16, 0.0, 0.01, 1.42, 1.35, 3.0, 1.06, 1.72, 0.07, 0.0, 3, 3, 1, 2
+
+        Testing mode (3, 3), with orientation 0, with rotation loss
+x -0.01
+y 0.08
+r 0.58
+0.58, 1.43, 3.0, 0.26, 0.01, 0.0, 0.33, 0.01, 0.4, 2.04, 1.82, 0.06, 2.93, 3, 3, 0, 2
+
+        Testing mode (3, 1), with orientation 1, with y displacement loss
+x -0.6
+y -0.66
+r 0.24
+-0.66, 1.81, 0.03, 2.96, 1.71, 2.99, 0.76, 0.0, 0.38, 1.53, 0.0, 0.28, 1.55, 3, 1, 1, 1
+
+        Testing mode (3, 1), with orientation 0, with y displacement loss
+x 0.27
+y 0.17
+r -0.21
+0.17, 1.11, 0.02, 0.0, 1.65, 0.21, 0.0, 0.0, 1.19, 2.28, 1.6, 2.99, 1.14, 3, 1, 0, 1
+
+        Testing mode (3, 1), with orientation 1, with x displacement loss
+x -0.37
+y -0.48
+r -0.14
+-0.37, 0.74, 2.99, 2.09, 0.0, 0.0, 1.17, 1.12, 0.01, 2.98, 1.87, 2.52, 0.07, 3, 1, 1, 0
+
+        Testing mode (3, 1), with orientation 0, with x displacement loss
+x 0.36
+y 0.35
+r -0.45
+0.36, 1.98, 2.96, 0.61, 1.26, 0.0, 0.0, 2.98, 0.02, 1.34, 0.02, 2.37, 2.14, 3, 1, 0, 0
+
+        Testing mode (3, 1), with orientation 1, with rotation loss
+x -0.03
+y -0.15
+r -0.22
+-0.22, 2.79, 0.42, 2.22, 1.68, 1.21, 0.02, 0.0, 0.42, 0.0, 0.01, 1.35, 2.19, 3, 1, 1, 2
+
+        Testing mode (3, 1), with orientation 0, with rotation loss
+x 0.28
+y -0.43
+r 0.85
+0.85, 2.99, 0.01, 1.35, 1.21, 0.06, 3.0, 2.85, 2.41, 0.05, 2.84, 2.98, 1.54, 3, 1, 0, 2
+
+        Testing mode (1, 1), with orientation 1, with y displacement loss
+x 0.18
+y -0.14
+r -1.45
+-0.14, 1.68, 0.48, 0.01, 1.6, 0.36, 0.0, 0.66, 3.0, 1.4, 2.97, 0.18, 2.04, 1, 1, 1, 1
+
+        Testing mode (1, 1), with orientation 0, with y displacement loss
+x -0.01
+y 0.16
+r -1.25
+0.16, 1.63, 2.99, 1.0, 0.99, 0.02, 0.0, 3.0, 0.02, 0.0, 0.01, 1.67, 2.29, 1, 1, 0, 1
+
+        Testing mode (1, 1), with orientation 1, with x displacement loss
+x 0.06
+y -0.1
+r 3.36
+0.06, 1.65, 0.33, 0.0, 2.98, 0.03, 1.8, 0.73, 3.0, 1.74, 1.64, 0.61, 0.01, 1, 1, 1, 0
+
+        Testing mode (1, 1), with orientation 0, with x displacement loss
+x 0.42
+y -0.31
+r 2.21
+0.42, 0.35, 2.99, 1.68, 2.18, 2.99, 0.0, 1.75, 0.26, 0.0, 3.0, 0.1, 1.88, 1, 1, 0, 0
+
+        Testing mode (1, 1), with orientation 1, with rotation loss
+x 0.05
+y -0.11
+r 4.55
+4.55, 0.02, 0.43, 1.84, 1.77, 0.02, 2.98, 1.65, 3.0, 0.27, 0.0, 0.0, 0.0, 1, 1, 1, 2
+
+        Testing mode (1, 1), with orientation 0, with rotation loss
+x -0.28
+y -0.15
+r 2.92
+2.92, 0.0, 0.43, 1.83, 1.78, 0.02, 2.98, 1.83, 3.0, 0.92, 0.0, 0.44, 1.46, 1, 1, 0, 2
+
+        Testing mode (1, 2), with orientation 1, with y displacement loss
+x -0.11
+y 0.11
+r 1.5
+0.11, 0.78, 3.0, 1.74, 1.47, 0.43, 0.0, 1.73, 0.39, 0.01, 2.99, 0.01, 1.83, 1, 2, 1, 1
+
+        Testing mode (1, 2), with orientation 0, with y displacement loss
+x 0.06
+y -0.08
+r 3.02
+-0.08, 2.95, 0.3, 2.11, 1.37, 1.08, 0.01, 0.0, 0.38, 0.0, 0.01, 1.35, 2.13, 1, 2, 0, 1
+
+        Testing mode (1, 2), with orientation 1, with x displacement loss
+x 0.3
+y -0.28
+r 0.79
+0.3, 1.79, 0.03, 2.98, 1.5, 2.99, 0.29, 0.0, 0.0, 0.0, 0.03, 0.44, 1.92, 1, 2, 1, 0
+
+        Testing mode (1, 2), with orientation 0, with x displacement loss
+x -0.38
+y -0.11
+r -2.99
+-0.38, 0.0, 1.16, 1.66, 1.79, 3.0, 0.74, 1.73, 0.73, 0.0, 2.73, 0.42, 2.06, 1, 2, 0, 0
+
+        Testing mode (1, 2), with orientation 1, with rotation loss
+x 0.13
+y -0.1
+r -0.45
+-0.45, 0.0, 0.03, 2.98, 2.35, 0.98, 0.0, 1.85, 2.97, 0.02, 0.0, 0.0, 0.08, 1, 2, 1, 2
+
+        Testing mode (1, 2), with orientation 0, with rotation loss
+x -0.21
+y -0.01
+r 2.17
+2.17, 1.83, 0.0, 2.97, 1.74, 2.99, 0.79, 0.0, 0.36, 1.52, 0.0, 0.34, 1.58, 1, 2, 0, 2

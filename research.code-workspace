@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "origami-robot",
+			"path": "."
+		},
+		{
+			"name": "usevitch-figure_generator",
+			"path": "../usevitch-figure_generator"
+		},
+		{
+			"name": "background_removal",
+			"path": "../background_removal"
+		},
+		{
+			"name": "wing-figure-generator",
+			"path": "../wing-figure-generator"
+		}
+	]
+}
