@@ -8,7 +8,7 @@ There are two primary directories here: `robotics` and `simulation`.
 
 <img width="732" height="776" alt="cad_model" src="https://github.com/user-attachments/assets/71d7d19f-49c7-4d10-85c8-51bdeea7cdaa" />
 
-`robotics` contains everything relating to the physical robot. It has the Platformio code used to control the physical robot constructed, with the final version of the code residing in `CMR_ORIGAMI_ROBOT_GAIT.cpp`. It has all CAD files used in the construction of the robot, as well as the custom PCBs. It contains instructions for 3D printing and assembly of parts to recreate the configuration used in the paper (see the `README.md` in the folder). It also has all materials obtained during experimentation, namely, the videos and statistical analysis of the gaits used during testing.
+`robotics` contains everything relating to the physical robot. It has the Platformio code used to control the physical robot constructed, with the final version of the code residing in `CMR_ORIGAMI_ROBOT_GAIT.cpp`. It has all CAD files used in the construction of the robot, as well as the custom PCBs. It contains instructions for 3D printing and assembly of parts to recreate the configuration used in the paper (see the `README.md` in the folder). It also has all materials obtained during experimentation, namely, the statistical analysis of the gaits used during testing.
 
 ## simulation
 
