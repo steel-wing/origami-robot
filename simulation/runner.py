@@ -245,90 +245,90 @@ def bez_sim(x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4,
 
 
 if __name__ == "__main__":
-    # f_s = 0.1
+    u_s = 0.3
 
     # # excellent crab-like rotator (1, 2 -> r=5.64)
     # print("turn")
-    # bez_sim(0.24, 0.23, 0.87, 1.24, 0.1, 0.21, 2.82, 2.48, 0.22, 0.26, 2.37, 2.99, 1, 2, 1, 2, False, True, f_s)
+    bez_sim(0.24, 0.23, 0.87, 1.24, 0.1, 0.21, 2.82, 2.48, 0.22, 0.26, 2.37, 2.99, 1, 2, 1, 2, False, True, u_s)
 
     # # walker/rotator (1, 1 -> r=1.36)
     # print("walk")
-    # bez_sim(0.4, 0.4, 0.5, 0.3, 2.5, 2.8, 2.5, 2.5, 0.5, 1.4, 0.5, 0.5, 1, 1, 0, 2, False, True, f_s)
+    bez_sim(0.4, 0.4, 0.5, 0.3, 2.5, 2.8, 2.5, 2.5, 0.5, 1.4, 0.5, 0.5, 1, 1, 0, 2, False, True, u_s)
 
     # # diagonal crawler (3, 1 -> y=0.80)
     # print("run")
-    # bez_sim(0.56, 1.89, 0.8, 2.8, 0.1, 2.93, 0.25, 0.22, 2.8, 0.25, 0.8, 0.71, 3, 1, 1, 1, False, True, f_s) 
+    bez_sim(0.56, 1.89, 0.8, 2.8, 0.1, 2.93, 0.25, 0.22, 2.8, 0.25, 0.8, 0.71, 3, 1, 1, 1, False, True, u_s) 
 
     # # gallop (4, 4 -> y=0.88)
     # print("gallop")
-    # bez_sim(0.2, 0.2, 2.2, 2.2, 0.9, 0.2, 1.8, 2.2, 0.2, 0.2, 0.2, 0.2, 4, 4, 1, 1, False, True, f_s)
+    bez_sim(0.2, 0.2, 2.2, 2.2, 0.9, 0.2, 1.8, 2.2, 0.2, 0.2, 0.2, 0.2, 4, 4, 1, 1, False, True, u_s)
 
 
 # Friction Analysis
 
-    turn_d = np.array([])
-    turn_r = np.array([])
-    walk_d = np.array([])
-    walk_r = np.array([])
-    run_d = np.array([])
-    run_r = np.array([])
-    gallop_d = np.array([])
-    gallop_r = np.array([])
+    # turn_d = np.array([])
+    # turn_r = np.array([])
+    # walk_d = np.array([])
+    # walk_r = np.array([])
+    # run_d = np.array([])
+    # run_r = np.array([])
+    # gallop_d = np.array([])
+    # gallop_r = np.array([])
     
-    for i in range(1,21):
-        f_s = float(i)/20.0
+    # for i in range(1,21):
+    #     u_s = float(i)/20.0
 
-        tx, ty, tr = bez_sim(0.24, 0.23, 0.87, 1.24, 0.1, 0.21, 2.82, 2.48, 0.22, 0.26, 2.37, 2.99, 1, 2, 1, 2, False, False, f_s)
-        turn_d = np.append(turn_d, np.sqrt(tx**2 + ty**2))
-        turn_r = np.append(turn_r, tr)
-        wx, wy, wr = bez_sim(0.4, 0.4, 0.5, 0.3, 2.5, 2.8, 2.5, 2.5, 0.5, 1.4, 0.5, 0.5, 1, 1, 0, 2, False, False, f_s)
-        walk_d = np.append(walk_d, np.sqrt(wx**2 + wy**2))
-        walk_r = np.append(walk_r, wr)
-        rx, ry, rr = bez_sim(0.56, 1.89, 0.8, 2.8, 0.1, 2.93, 0.25, 0.22, 2.8, 0.25, 0.8, 0.71, 3, 1, 1, 1, False, False, f_s) 
-        run_d = np.append(run_d, np.sqrt(rx**2 + ry**2))
-        run_r = np.append(run_r, rr)
-        gx, gy, gr = bez_sim(0.2, 0.2, 2.2, 2.2, 0.9, 0.2, 1.8, 2.2, 0.2, 0.2, 0.2, 0.2, 4, 4, 1, 1, False, False, f_s)
-        gallop_d = np.append(gallop_d, np.sqrt(gx**2 + gy**2))
-        gallop_r = np.append(gallop_r, gr)
-        print(i)
+    #     tx, ty, tr = bez_sim(0.24, 0.23, 0.87, 1.24, 0.1, 0.21, 2.82, 2.48, 0.22, 0.26, 2.37, 2.99, 1, 2, 1, 2, False, False, u_s)
+    #     turn_d = np.append(turn_d, np.sqrt(tx**2 + ty**2))
+    #     turn_r = np.append(turn_r, tr)
+    #     wx, wy, wr = bez_sim(0.4, 0.4, 0.5, 0.3, 2.5, 2.8, 2.5, 2.5, 0.5, 1.4, 0.5, 0.5, 1, 1, 0, 2, False, False, u_s)
+    #     walk_d = np.append(walk_d, np.sqrt(wx**2 + wy**2))
+    #     walk_r = np.append(walk_r, wr)
+    #     rx, ry, rr = bez_sim(0.56, 1.89, 0.8, 2.8, 0.1, 2.93, 0.25, 0.22, 2.8, 0.25, 0.8, 0.71, 3, 1, 1, 1, False, False, u_s) 
+    #     run_d = np.append(run_d, np.sqrt(rx**2 + ry**2))
+    #     run_r = np.append(run_r, rr)
+    #     gx, gy, gr = bez_sim(0.2, 0.2, 2.2, 2.2, 0.9, 0.2, 1.8, 2.2, 0.2, 0.2, 0.2, 0.2, 4, 4, 1, 1, False, False, u_s)
+    #     gallop_d = np.append(gallop_d, np.sqrt(gx**2 + gy**2))
+    #     gallop_r = np.append(gallop_r, gr)
+    #     print(i)
     
-    import matplotlib.pyplot as plt
+    # import matplotlib.pyplot as plt
 
-    f_vals = (np.arange(20) + 1) / 20.0
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
+    # f_vals = (np.arange(20) + 1) / 20.0
+    # fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
-    # scaling, m->cm, rad->deg
-    turn_d *= 100
-    walk_d *= 100
-    run_d *= 100
-    gallop_d *= 100
+    # # scaling, m->cm, rad->deg
+    # turn_d *= 100
+    # walk_d *= 100
+    # run_d *= 100
+    # gallop_d *= 100
 
-    turn_r *= 180 / np.pi
-    walk_r *= 180 / np.pi
-    run_r *= 180 / np.pi
-    gallop_r *= 180 / np.pi
+    # turn_r *= 180 / np.pi
+    # walk_r *= 180 / np.pi
+    # run_r *= 180 / np.pi
+    # gallop_r *= 180 / np.pi
 
-    ax1.plot(f_vals, turn_d, marker='o', label='Turn')
-    ax1.plot(f_vals, walk_d, marker='s', label='Walk')
-    ax1.plot(f_vals, run_d, marker='^', label='Run')
-    ax1.plot(f_vals, gallop_d, marker='d', label='Gallop')
+    # ax1.plot(f_vals, turn_d, marker='o', label='Turn')
+    # ax1.plot(f_vals, walk_d, marker='s', label='Walk')
+    # ax1.plot(f_vals, run_d, marker='^', label='Run')
+    # ax1.plot(f_vals, gallop_d, marker='d', label='Gallop')
 
-    ax1.set_title("Distance vs. Sliding Friction")
-    ax1.set_xlabel(r"$f_s$")
-    ax1.set_ylabel("Distance (cm)")
-    ax1.grid(True, alpha=0.3)
-    ax1.legend(loc='center right')
+    # ax1.set_title("Distance vs. Sliding Friction")
+    # ax1.set_xlabel(r"$\mu_s$")
+    # ax1.set_ylabel("Distance (cm)")
+    # ax1.grid(True, alpha=0.3)
+    # ax1.legend(loc='center right')
 
-    ax2.plot(f_vals, turn_r, marker='o', label='Turn')
-    ax2.plot(f_vals, walk_r, marker='s', label='Walk')
-    ax2.plot(f_vals, run_r, marker='^', label='Run')
-    ax2.plot(f_vals, gallop_r, marker='d', label='Gallop')
+    # ax2.plot(f_vals, turn_r, marker='o', label='Turn')
+    # ax2.plot(f_vals, walk_r, marker='s', label='Walk')
+    # ax2.plot(f_vals, run_r, marker='^', label='Run')
+    # ax2.plot(f_vals, gallop_r, marker='d', label='Gallop')
 
-    ax2.set_title("Rotation vs. Sliding Friction")
-    ax2.set_xlabel(r"$f_s$")
-    ax2.set_ylabel("Rotation (deg)")
-    ax2.grid(True, alpha=0.3)
-    ax2.legend(loc='center right')
+    # ax2.set_title("Rotation vs. Sliding Friction")
+    # ax2.set_xlabel(r"$\mu_s$")
+    # ax2.set_ylabel("Rotation (deg)")
+    # ax2.grid(True, alpha=0.3)
+    # ax2.legend(loc='center right')
 
-    plt.tight_layout()
-    plt.show()
+    # plt.tight_layout()
+    # plt.show()
